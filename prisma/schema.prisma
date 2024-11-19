@@ -16,7 +16,7 @@ datasource db {
 model User {
   id           Int           @id @default(autoincrement())
   username         String
-  reservations Reservation[]
+  playlists Playlist[]
 }
 
 model Playlist {
@@ -25,6 +25,6 @@ model Playlist {
   description     String
   ownerId Int
 
-  restaurant   Restaurant @relation(fields: [restaurantId], references: [id])
-  restaurantId Int
+  user   User @relation(fields: [ownerId], references: [id])
+  ownerID Int
 }
