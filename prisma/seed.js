@@ -1,7 +1,7 @@
 const prisma = require("../prisma");
 const { faker } = require("@faker-js/faker");
 
-// Create users who own a few playlists each
+
 const seed = async (numUsers = 3, numPlaylists = 5) => {
   for (let i = 0; i < numUsers; i++) {
     const playlists = Array.from({ length: numPlaylists }, () => ({
