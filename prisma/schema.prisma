@@ -25,6 +25,6 @@ model Playlist {
   description     String
   ownerId Int
 
-  user   User @relation(fields: [ownerId], references: [id])
+  owner   User @relation(fields: [ownerId], references: [id])
   ownerID Int
 }
